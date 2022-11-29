@@ -1,6 +1,7 @@
 # APP description
 # Guide from: https://www.youtube.com/watch?v=BSoRXk1FIw8
-# Stopped at 9:46
+# Stopped at 15:08
+# Error with map returning null upon hosting to Vercel. I need to find a way to check the connection with Supabase before pulling images
 
 
 
