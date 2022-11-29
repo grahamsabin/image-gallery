@@ -1,8 +1,6 @@
-import { calculateSizeAdjustValues } from "next/dist/server/font-utils";
 import Image from "next/image";
 import { useState } from "react";
 import { createClient } from '@supabase/supabase-js';
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
 
 export async function getStaticProps() {
   const supabaseAdmin = createClient(
@@ -39,9 +37,11 @@ export default function Gallery({ images }: { images: Image[] }) {
     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
       <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-9">
         {/* Images here */}
-        {images.map((image) => (
+        {images != null ?
+        images.map((image) => (
           <BlurImage key={image.id} image={image} />
-        ))}
+        ))
+      : null}
       </div>
     </div>
     
