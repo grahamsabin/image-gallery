@@ -21,5 +21,4 @@ export default async function handler(
     } catch (err) {
       return res.status(500).send('Error revalidating')
     }
-  // res.status(200).json({ name: 'John Doe' })
-}
+  }
