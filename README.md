@@ -3,6 +3,10 @@
 # Stopped at 15:08
 # Error with map returning null upon hosting to Vercel. I need to find a way to check the connection with Supabase before pulling images
 
+# SASS Tools Used:
+    Supabase (Image DB)
+    Vercel (Hosting)
+
 
 
 # Next.js + Tailwind CSS Example
