@@ -1,0 +1,17 @@
+// @import './colors.scss';
+// Override Bulma colors
+// $primary: $app-red;
+// $link: $app-black;
+
+@import 'bulma/bulma';
+
+html,
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.page {
+    margin: 20px 15px 20px 15px;
+}
