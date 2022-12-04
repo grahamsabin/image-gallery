@@ -53,8 +53,8 @@ export default function Gallery({ images }: { images: Image[] }) {
     <>
       <UpperText/>
 
-      <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-    
+      {/* <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"> */}
+      <div className={`${style.galleryFormat}`}>
         {showImageModal
 
           ? <PopupModal imageElement={imageToShow} showImageModal={showImageModal} setShowImageModal={setShowImageModal} />
@@ -95,7 +95,7 @@ function BlurImage({image}: {image: Image}, {onClick}) {
           onLoadingComplete={() => setLoading(false)}
           />
       </div>
-      <p className="mt-1 text-lg font-medium text-gray-900">{image.year}</p>
+      <p className={`${style.galleryYear}`}>{image.year}</p>
     </a>
   )
 
@@ -132,8 +132,11 @@ function UpperText() {
         <div className={`column is-full`}>
           <h1 className={`${style.titleText}`}>Immigration Through the Ages</h1>
         </div>
-        <div className={`column is-half is-centered`}>
-          Test here
+        <div className={`column is-full ${style.nameDiv}`}>
+          <p className={`${style.nameIntro}`}>A Taylor and Graham Production</p>
+        </div>
+        <div className={`column is-full ${style.introText}`}>
+          {introText}
         </div>
 
       </div>
@@ -141,3 +144,5 @@ function UpperText() {
     </div>
   )
 }
+
+const introText = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32."

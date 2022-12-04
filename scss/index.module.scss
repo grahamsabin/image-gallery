@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 .title {
@@ -8,48 +8,65 @@
 
 .yearTag {
   font-size: 40px;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Bebas Neue', cursive;
   font-weight: 700;
-  color: red;
+  color: black;
 }
 
-.descriptionTag {
-  font-family: 'Roboto Slab', serif;
-  font-weight: 300;
+.galleryYear {
+  font-family: 'Bebas Neue', cursive;
+  color: black;
   font-size: 25px;
 }
 
-// .imageChange {
-//   border-radius: 6px;
-//   //width: 1000px;
-//   width: auto;
-//   height: auto;
-// }
-
-// .imageBox {
-//   width: auto;
-//   height: auto;
-// }
-
-// .modalSizing {
-//   // position: fixed;
-//   width: auto;
-//   height: auto;
-// }
+.descriptionTag {
+  font-weight: 300;
+  font-size: 20px;
+}
 
 .titleBox {
   margin-bottom: -25px;
   margin-top: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-  background-color: rgb(246, 246, 239);
+  margin-left: 75px;
+  margin-right: 75px;
+  filter: drop-shadow(0px 0px 2px black);
+  //background-color: rgb(246, 246, 239);
+  //border-style: inset;
+  //border-width: 5px;
+  //border-color: black;
   
   //height: px;
 }
 
 .titleText {
-  font-size: 70px;
+  font-size: 100px;
   display: flex;
   //align-items: center;
   justify-content: center;
+  font-family: 'Bebas Neue', cursive;
+
+}
+
+.introText {
+  font-weight: 400;
+  color: rgb(82, 80, 80);
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.galleryFormat {
+  margin-right: 125px;
+  margin-left: 125px;
+  margin-top: 50px;
+}
+
+.nameIntro {
+  display: flex;
+  //align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+}
+.nameDiv {
+  margin-top: -60px;
 }
