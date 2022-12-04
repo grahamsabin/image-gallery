@@ -3,7 +3,7 @@ import { use, useState, Component } from "react";
 import { createClient } from '@supabase/supabase-js';
 import 'bulma/css/bulma.min.css';
 import style from '../scss/index.module.scss';
-import Link from "next/link";
+
 
 
 export async function getStaticProps() {
@@ -51,20 +51,12 @@ export default function Gallery({ images }: { images: Image[] }) {
   return (
     
     <>
-     <div className={`columns is-multiline`}>
-          <div className={`column is-two-thirds is-centered box `}>
-
-            <h1 className={`is-centered ${style.title}`}>Hello</h1>
-          </div>
-        </div>
+      <UpperText/>
 
       <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
     
-        
-
-        
         {showImageModal
-          // 
+
           ? <PopupModal imageElement={imageToShow} showImageModal={showImageModal} setShowImageModal={setShowImageModal} />
           : <></>
         }
@@ -72,7 +64,6 @@ export default function Gallery({ images }: { images: Image[] }) {
         <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-9">
           {images.map((image) => (
             <>
-            
               <div onClick={() => imageClick(image)}>
                   <BlurImage key={image.id} image={image}/>
               </div>
@@ -81,8 +72,6 @@ export default function Gallery({ images }: { images: Image[] }) {
         </div>
       </div>
     </>
-
-    
   ); 
 }
 
@@ -112,27 +101,43 @@ function BlurImage({image}: {image: Image}, {onClick}) {
 
 }
 
-function PopupModal ({imageElement, showImageModal, setShowImageModal }) {
-  const [modalActive, setModalActive] = useState('is-active');
-  
+function PopupModal ({imageElement, showImageModal, setShowImageModal }) {  
   function handleClose() {
     setShowImageModal(false);
   }
   
   return (
-    <div className={`modal ${modalActive}`}>
+    <div className={`modal is-active `}>
       <div className={`modal-background`} onClick={handleClose}></div>
-      <div className={`modal-content`}>
-        <div className={`box`}>
+      <div className={`modal-content ${style.modalSizing}`}>
+        <div className={`box ${style.imageBox}`}>
           {/* THE HREF TAG IS ESSENTIALLY THE SOURCE */}
           <a href={imageElement.href} target="_blank" rel="noopener noreferrer">
-            <img src={imageElement.imageSrc}/>
+            <img src={imageElement.imageSrc} className={`${style.imageChange}`}/>
           </a>
-          <p>{imageElement.description}</p>
+          <h1 className={`${style.yearTag}`}>{imageElement.year}</h1>
+          <p className={`${style.descriptionTag}`}>{imageElement.description}</p>
         </div>
 
       </div>
       <button className={`modal-close is-large`} onClick={handleClose}></button>
+    </div>
+  )
+}
+
+function UpperText() {
+  return (
+    <div className={`box ${style.titleBox}`}>
+      <div className={`columns is-multiline`}>
+        <div className={`column is-full`}>
+          <h1 className={`${style.titleText}`}>Immigration Through the Ages</h1>
+        </div>
+        <div className={`column is-half is-centered`}>
+          Test here
+        </div>
+
+      </div>
+
     </div>
   )
 }
