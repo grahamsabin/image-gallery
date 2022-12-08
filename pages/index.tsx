@@ -130,10 +130,10 @@ function UpperText() {
     <div className={`box ${style.titleBox}`}>
       <div className={`columns is-multiline`}>
         <div className={`column is-full`}>
-          <h1 className={`${style.titleText}`}>Immigration Through the Ages</h1>
+          <h1 className={`${style.titleText}`}>Immigration throughout the ages</h1>
         </div>
         <div className={`column is-full ${style.nameDiv}`}>
-          <p className={`${style.nameIntro}`}>A Taylor and Graham Production</p>
+          <p className={`${style.nameIntro}`}>Graham Sabin | Taylor Lupo</p>
         </div>
         <div className={`column is-full ${style.introText}`}>
           {introText}
@@ -145,4 +145,4 @@ function UpperText() {
   )
 }
 
-const introText = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32."
+const introText = "The European Union is an entity which represents a block of 27 European countries sharing political and economic alliance. The abolition of border controls between most EU countries allows citizens to freely travel throughout most of the continent, as every EU citizen is allowed to work, study, or live in any EU nation. Due to the united front of the EU, immigration policy is a hot issue constantly under consideration. Given that EU members may travel freely throughout the EU, immigrants in one EU country are essentially immigrants in every EU country. The variety of party opinions throughout the EU and various refugee crises around Europe and the world, it is critical to study EU immigration policy of the past, in order to understand what may happen next. The collection of images found below offers a chronological look at European Union immigration over the last 5 decades. The images can each be selected and expanded to see a closer look at the image as well as a description to explain it's significance."
