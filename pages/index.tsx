@@ -13,7 +13,7 @@ export async function getStaticProps() {
   );
 
   const {data} = await supabaseAdmin
-    .from('images')
+    .from('images2')
     .select('*')
     .order('id');
   return {
